@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "Twitter Unfollower",
+    "version": "1.0",
+    "description": "Unfollow people who don't follow you back on Twitter.",
+    "permissions": ["activeTab", "scripting"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://twitter.com/*"],
+        "js": ["content.js"]
+      }
+    ],
+    "icons": {
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  }
+  
